@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-  BrowserRouter,
   Routes,
   Route,
   Link,
@@ -33,13 +32,12 @@ Tutorials
      </div>
   </nav>
   <div className='container mt-3'>
-    <BrowserRouter>
       <Routes>
-      <Route path={["/","/tutorials"]} element={<TutorialsList/>}/>
-      <Route path="/add" element={<AddTutorial/>}/>
-      <Route path="/tutorials/:id" element={<Tutorial/>}/>
+      <Route path={'/'} element={<TutorialsList/>}/>
+      <Route path={'/tutorials'} element={<TutorialsList/>}/>
+      <Route path='/add' element={<AddTutorial/>}/>
+      <Route path='/tutorials/:id' element={<Tutorial/>}/>
       </Routes>
-      </BrowserRouter>
   </div>
 </div>);
   }
