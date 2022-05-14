@@ -1,11 +1,12 @@
 package com.seanrogandev.crudapp.demo.model;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Tutorials")
 @NoArgsConstructor
+
 public class Tutorial {
     @Id //for primary key
     @GeneratedValue(strategy = GenerationType.AUTO)
